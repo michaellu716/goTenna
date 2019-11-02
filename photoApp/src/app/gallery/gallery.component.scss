@@ -1,0 +1,78 @@
+.bg-light {
+    background-color: #f8f9fa!important;
+}
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+.navbar {
+    background-color: #f8f8f8;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(0,0,0,.9);
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.navbar-brand {
+    font-family: 'Courier New';
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    max-height: 100vh;
+}
+.one-third{
+    width: 20%;
+    float: left;
+    margin: 2%;
+}
+.cards img {
+    margin: 10px;
+    display: block;
+    max-width: 100%;
+    transition: 1s;
+    box-shadow: 10px 10px 5px #ccc;
+}
+.cards img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+.search-results {
+    height: 100px;
+    overflow: scroll;
+}
+.gray_effect{
+    padding: 10px;
+    background: gray;
+    color:white;
+}
+.color_effect{
+    padding: 10px;
+    background:darkorchid;
+    color:white;
+}
+.input{
+    border-radius: 10px;
+}

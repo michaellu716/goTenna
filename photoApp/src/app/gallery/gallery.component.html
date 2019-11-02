@@ -1,0 +1,38 @@
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="./assets/logo.png" width="30" height="30" class="d-inline-block align-top logo" alt="">
+        goTenna
+      </a>
+      </nav>
+      <div class="main-panel">
+        <div
+            infiniteScroll
+            [infiniteScrollDistance]="scrollDistance"
+            [infiniteScrollThrottle]="scrollUpDistance"
+            [infiniteScrollContainer]="selector"
+            [fromRoot]="true"
+            (scrolled)="onScrollDown(scrollDistance)"
+            (scrolledUp)="onUp()">
+            <p *ngFor="let i of array">
+               {{ i }}
+            </p>
+      </div>    
+    <div class="container">		
+        <div class="d-flex justify-content-center"><h1 class="heading">Photo Viewer</h1></div>
+        <div class="d-flex justify-content-center">
+          <input class="input" id="filter" [(ngModel)]="term" placeholder="enter image size...">
+        </div>
+    </div>
+  <br/>
+  <div class="d-flex justify-content-center"><button (click)="convert_grayscale()" [ngClass]="scale ? 'color_effect' : 'gray_effect'"><span >Toggle Grayscale</span></button></div>
+  <div class="wrapper">
+      <div class="cards" id="output">
+          <section class="one-third" *ngFor="let data of _album |filter:term ; let i = index">
+                <img class="images img-fluid" id="image" [src]='data.thumb' (click)="open(i)"/>
+          </section>
+      </div>
+  </div>
+</div>   
+</body>
